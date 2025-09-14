@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Franze Pintal Productionz — Design & Web Development</title>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+  <!--
+    Coolors palette URL (saved palette):
+    https://coolors.co/564787-00241b-508991-9ad4d6-f2fdff
+  -->
+
+  <style>
+
+   /* 🎨 Color Variables */
+   :root {
+  --ultra-violet: #564787ff;
+  --dark-green: #00241bff;
+  --blue-munsell: #508991ff;
+  --tiffany-blue: #9ad4d6ff;
+  --azure-web: #f2fdffff;
+}
+
+/* Makes the width include the padding and border */
+* {
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--tiffany-blue), var(--azure-web));
+  color: var(--dark-green);
+  max-width: 900px;
+ /* width: 90%; */
+  margin: 0 auto;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+
+/* Anchor Links Styling */
+a {
+  color: var(--blue-munsell);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+  color: var(--dark-green);
+  transform: scale(1.05);
+}
+
+/* Main Section Styling */
+main {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+/* H2 Styling */
+h1,h2,h3 {
+  font-family: 'Trebuchet MS', sans-serif;
+  color: var(--ultra-violet);
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* H3 Styling for Client Section */
+client-header {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 1.5rem;
+  color: var(--ultra-violet);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Profile Picture Styling */
+.profile-pic {
+  width: 250px;      
+  height: auto;       
+  border-radius: 50%;
+  display: block;    
+  margin: 20px auto;  
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Feature List Styling */
+ul.sig-features {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+ul.sig-features li::before {
+  content: "*";  /* Or any symbol you like */
+  color: var(--ultra-violet);
+  margin-right: 8px;
+}
+
+ul.sig-features li {
+  margin-bottom: 10px;
+}
+
+/* Paragraph spacing */
+main p {
+  margin-bottom: 15px;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  color: var(--dark-green);
+}
+
+footer a {
+  color: var(--blue-munsell);
+}
+
+footer a:hover {
+  color: var(--ultra-violet);
+  transform: scale(1.05);
+}
+
+.contact p {
+  color: var(--dark-green);
+  margin: 5px 0;
+  
+}
+
+
+/* Responsive tweaks */
+@media (max-width:640px){
+  header{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav{ 
+    margin-left: 0; 
+    width: 100%; 
+    display: flex; 
+    gap: 0.5rem; 
+  }
+  footer{ 
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 0.5rem; 
+  }
+  ul.sig-features{ 
+    grid-template-columns: 1fr; 
+  }
+
+  .tagline {
+  text-align: center;
+  font-style: italic;
+  color: var(--ultra-violet);
+  margin-top: 5px;
+}
+
+}
+</style>
+</head>
+
+<body>
+  <header>
+    <!--
+      
+      IMPORTANT: Resize the original image in an image editor before using.
+      Do not upscale an image. Set width/height attributes below to the final display size.
+    -->
+    <img src="images/logo.png" alt="Franze Pintal Productionz logo " width="96" height="96" />
+    <h1>
+        Franze Pintal Productionz
+    </h1>
+  </header>
+
+  <main>
+    <h2 class="tagline">
+        We Produce For Your Use!
+    </h2>
+    <p>
+        We craft clean, human-focused web experiences with clarity and creativity.
+    </p>
+
+    <ul class="sig-features">
+        <li>Custom Web Design</li>
+        <li>Responsive Development</li>
+        <li>UX/UI Consultation</li>
+      </ul>
+
+    
+    <h3 class="client-header">Why Clients Choose Us</h3>
+    <p>Our clients benefit from websites that are both visually engaging and highly functional. 
+        We work closely with each client to understand their goals and craft digital experiences that reflect their brand,
+        attract their audience, and drive meaningful results.
+        Whether it's creating a sleek portfolio or a fully interactive web platform,
+        we make sure every project delivers clarity, creativity, and impact.</p>
+
+
+  </main>
+
+  <footer>
+    <h3>Contact Us!</h3>
+<div class="contact">
+    <p>Email: fpintal@charlotte.edu</p>
+    <p>999-9999-9999</p>
+    <p>123 Web Lane, Charlotte, NC</p>
+</div>
+
+    <nav>
+        <a href="https://webpages.charlotte.edu/fpintal">Personal Homepage</a> | 
+        <a href="https://webpages.charlotte.edu/fpintal/itis3135/">Course Page</a> |
+        <a href="https://webpages.charlotte.edu/fpintal/itis3135/fproductionz.com/">Design Firm</a> |
+        <a href="">Whismical (TBD)</a> |
+        <a href="https://github.com/fpintal">GitHub.com</a> | 
+        <a href="https://fpintal.github.io/">GitHub.io</a> | 
+        <a href="https://www.linkedin.com/in/fpintal/">LinkedIn</a> |
+        <a href="https://validator.w3.org/check?uri=referer" target="_blank">HTML Validation</a> |
+<a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">CSS Validation</a> |
+
+      </nav>
+
+      <p>&copy; 2025 Franze Pintal Productionz - We Produce For Your Use!</p>
+
+  </footer>
+
+ 
