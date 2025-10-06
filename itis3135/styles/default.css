@@ -7,69 +7,109 @@
     --azure-web: #f2fdffff;
   }
   
-  /* Body Styling */
+  /* Base / Layout */
+  * { box-sizing: border-box; }
+  
   body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, var(--tiffany-blue), var(--azure-web));
-      color: var(--dark-green);
-      max-width: 900px;
-      margin: 0 auto;
-      line-height: 1.6;
-      padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--tiffany-blue), var(--azure-web));
+    color: var(--dark-green);
+    line-height: 1.6;
+    /* page padding breathes on big screens, we’ll tighten it on mobile */
+    padding: 20px;
+    margin: 0;
   }
   
-  /* Makes the width include the padding and border */
-  * {
-      box-sizing: border-box;
-  }
-  
-  /* Anchor Links Styling */
-  a {
-      color: var(--blue-munsell);
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease, transform 0.2s ease;
-  }
-  
-  a:hover {
-      color: var(--dark-green);
-      transform: scale(1.05);
-  }
-  
-  /* Main Section Styling */
+  /* Main content card — meets the assignment’s “Foundational Three” */
   main {
-      background: rgba(255, 255, 255, 0.85);
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      margin-top: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;   
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   
-  /* H2 Styling */
+  /* Type & links */
   h2 {
-      font-family: 'Trebuchet MS', sans-serif;
-      color: var(--ultra-violet);
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-      text-align: center;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    font-family: 'Trebuchet MS', sans-serif;
+    color: var(--ultra-violet);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
   }
   
-  /* Profile Picture Styling */
+  a {
+    color: var(--blue-munsell);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  a:hover { color: var(--dark-green); transform: scale(1.05); }
+  
+  /* Media: prefer no motion for users who ask for it */
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+  
+  /* Images */
   .profile-pic {
-      width: 250px;      
-      height: auto;       
-      border-radius: 50%;
-      display: block;    
-      margin: 20px auto;  
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    max-width: 100%;  /* prevents overflow on narrow screens */
   }
-
-  figcaption {
-    text-align: center;
+  
+  figcaption, .quote { text-align: center; }
+  
+  /* -------------------------------
+     📱 Responsive Breakpoints (3 sizes)
+     1) Desktop: default rules above
+     2) Tablet: 601–980px
+     3) Mobile: ≤600px
+  -------------------------------- */
+  
+  /* Tablet */
+  @media screen and (min-width: 601px) and (max-width: 980px) {
+    body { padding: 16px; }
+    main {
+      width: 92%;
+      padding: 22px;
+      margin-top: 16px;
+    }
+    h2 { font-size: 1.6rem; }
+    .profile-pic { width: 200px; }
   }
-
-  .quote {
-    text-align: center;
+  
+  /* Mobile */
+  @media screen and (max-width: 600px) {
+    body { padding: 12px; }
+    main {
+      width: 95%;         /* a touch wider on tiny screens for space */
+      padding: 16px;
+      margin-top: 12px;
+      border-radius: 12px;
+    }
+    h2 { font-size: 1.35rem; }
+    .profile-pic { width: 140px; margin: 14px auto; }
+    /* Disable scale-on-hover to avoid layout jank on touch */
+    a:hover { transform: none; }
   }
+  
+  /* Optional: if you add a “Skip to content” link, style it accessibly
+  .skip-link {
+    position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+  }
+  .skip-link:focus {
+    left: 12px; top: 12px; width: auto; height: auto; padding: 8px 10px;
+    background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  }
+  */
   
