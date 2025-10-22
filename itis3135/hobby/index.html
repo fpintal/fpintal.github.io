@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Franze Pintal's Hobby</title>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+  <style>
+    /* ==============================
+       Global Reset & Base Styles
+    =============================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background-color: #fdfdfd;
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    /* ==============================
+       Global Typography
+    =============================== */
+    h1 {
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: inherit;
+        font-size: 2.5rem;
+}
+
+/* H2 — section titles (Home, About Me, Best Times, etc.) */
+    h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    color: inherit;
+    font-size: 2rem;
+    }
+    a {
+      color: #1e88e5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    nav {
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      padding: 1rem 0;
+    }
+
+
+    nav a {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    nav ul li+li::before {
+      content: " ⚽︎ ";
+      color: #fff;
+      opacity: .8;
+      margin: 0 .25rem;
+    }
+
+
+    .site-title {
+        color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+    text-align: left; 
+    font-size: 100%;         
+    max-width: 700px;          
+    margin: 1rem auto;        
+    line-height: 1.7;  
+    }
+    
+
+    /* ==============================
+       Section Styles
+    =============================== */
+    section {
+      display: none; 
+      padding: 5rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .active {
+      display: block; 
+    }
+
+    #what {
+      background-color: #fff3e0;
+      color: #e65100;
+    }
+
+    #who {
+      background-color: #e3f2fd;
+      color: #0d47a1;
+    }
+
+    #when {
+      background-color: #e8f5e9;
+      color: #1b5e20;
+    }
+
+    #where {
+      background-color: #f3e5f5;
+      color: #4a148c;
+    }
+
+    #how {
+      background-color: #e0f7fa;
+      color: #006064;
+    }
+
+    #why {
+      background-color: #ffebee;
+      color: #b71c1c;
+    }
+
+    #ai {
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    /* ==============================
+       Footer
+    =============================== */
+    footer {
+      background-color: #222;
+      color: #f9f9f9;
+      text-align: center;
+      padding: 2rem;
+      font-size: 100%;
+      margin-top: auto;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    footer p {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    footer a {
+      color: #90caf9;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ==============================
+       Table
+    =============================== */
+
+    table {
+      width: 100%;
+      border: 1px solid black;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      box-sizing: border-box;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 0.5rem;
+      text-align: left;
+        }
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title">Franze Learns Futbol</h1>
+      <ul>
+        <li><a href="#what">Home</a></li>
+        <li><a href="#who">About Me</a></li>
+        <li><a href="#when">Best Times</a></li>
+        <li><a href="#where">Greatest Arenas</a></li>
+        <li><a href="#how">How</a></li>
+        <li><a href="#why">Why</a></li>
+        <li><a href="#ai">AI Prompts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="what" class="active">
+      <h2>Home</h2>
+        <figure>
+            <img src="images/homeimage.png" alt="cover image for home page">
+            <figcaption>Logo of a soccer ball.</figcaption>
+        </figure>
+
+        <p>
+            Soccer, known as fútbol in most parts of the world, is the most popular sport on the planet — 
+            a universal game that transcends language, culture, and geography. It’s played by two teams of 
+            eleven players on a rectangular field, with the objective of kicking a ball into the opposing team’s 
+            goal. What makes soccer so accessible is its simplicity: all you need is a ball and open space. From 
+            crowded city streets to rural fields, soccer unites people of all ages and backgrounds through teamwork, strategy, 
+            and passion.
+        </p>
+
+        <p>Beyond its rules, soccer is about rhythm and creativity. Players use their feet, heads, and bodies 
+            to control the ball, combining individual skill with team coordination. Every match tells its own story
+            — moments of brilliance, unexpected comebacks, and emotional highs and lows that captivate fans worldwide. 
+            Legendary competitions like the FIFA World Cup and the UEFA Champions League highlight soccer’s global appeal, 
+            showcasing world-class talent and sparking intense national pride.
+        </p>
+
+        <p>
+            For many, soccer is more than just a sport — it’s a lifestyle and a source of community. It encourages discipline,
+            perseverance, and collaboration while bringing joy to those who play or watch. Whether it’s children practicing on
+            neighborhood fields, professionals competing in packed stadiums, or fans celebrating victories together, soccer 
+            represents a shared passion that connects millions. It reminds us that with teamwork, creativity, and heart, anything is possible.
+        </p>
+
+
+
+    </section>
+
+    <section id="who">
+        <h2>About Me</h2>
+        <figure style>
+          <img src="images/IMG_4859.jpg" alt="Picture of my friend and my senior year track banner" style="width: 300px; border-radius: 10px;">
+          <figcaption>My friend Keith, taking a picture with my Senior year Track and Field banner.</figcaption>
+        </figure>
+      
+          <p>
+            I've grown up playing a lot of sports — basketball, taekwondo, and track & field being the main ones. 
+            I’ve only played soccer once when I was three years old and haven’t touched a soccer ball since.
+          </p>
+      
+          <p>
+            My friend Keith, shown in the caption, is my roommate and has been my friend since high school. 
+            He moved from England in 2021 and is a big fan of the Premier League. 
+            Now that I live with him, I’ve started to get into fútbol.
+          </p>
+      
+          <p>
+            I started by playing <strong>FIFA 25</strong> on the PS5. 
+            After a while, Keith invited me to join his Fantasy League, and I’ve been hooked ever since. 
+            It’s helped me learn about players and made me watch more games every week.
+          </p>
+      
+      </section>
+      
+          
+      <section id="when">
+  
+        <figure>
+          <h2>Best Times</h2>
+          <img src="images/worldcup.jpg" alt="Fans celebrating during the World Cup" style="width: 300px; border-radius: 10px;">
+          <figcaption>The most recent World Cup Winner; Argentina.</figcaption>
+        </figure>
+      
+            <p>
+                The best time to be a soccer fan is during the regular club season, which usually runs from August to May. 
+                Every weekend brings new matches from leagues like the Premier League, La Liga, Serie A, and more. 
+                The atmosphere is electric — fans fill stadiums, bars, and living rooms around the world to cheer for their favorite teams. 
+                The excitement builds throughout the season as rivalries heat up, title races get tighter, and unexpected underdogs make headlines.
+            </p>
+            
+            <p>
+                Another amazing time to be a fan is during international tournaments like the FIFA World Cup, held every four years. 
+                The World Cup unites countries and fans from every corner of the globe, creating an unmatched sense of pride and passion. 
+                From dramatic upsets to unforgettable goals, it’s when even casual fans tune in to experience soccer at its peak. 
+                Streets fill with celebrations, people paint their faces with national colors, and for a month, the world revolves around the game.
+            </p>
+            
+            <p>
+                Summer also brings thrilling competitions like the UEFA European Championship and Copa América, where the best players represent their countries. 
+                Even in the off-season, excitement continues with transfer rumors, preseason friendlies, and new kit releases. 
+                Whether it’s the tension of a Champions League final in May or the kickoff of a new season in August, there’s always something to look forward to as a soccer fan.
+            </p>
+    </section>
+
+    <section id="where">
+        <h2>Greatest Arenas</h2>
+        <figure>
+          <img src="images/greatestarenasimg1.webp" alt="Picture of my friend and my senior year track banner" style="width: 300px; border-radius: 10px;">
+          <figcaption>Camp Nou, home of FC Barcelona.</figcaption>
+        </figure>
+      
+            <p>
+                Some soccer stadiums aren’t just venues — they’re symbols of history, pride, and passion. 
+                These arenas have witnessed legendary goals, iconic players, and moments that shaped the game.
+              </p>
+          
+              <p>
+                <strong>Camp Nou</strong> in Barcelona, Spain, is one of the most famous. 
+                With nearly 100,000 seats, it’s known for its electric atmosphere and unforgettable FC Barcelona matches. 
+                <strong>Wembley Stadium</strong> in London is another legendary arena, often called the “home of football.”
+              </p>
+          
+              <p>
+                Other icons include <strong>Maracanã</strong> in Brazil, which hosted World Cup finals, and 
+                <strong>Santiago Bernabéu</strong> in Madrid, home to Real Madrid’s rich legacy. 
+                Each arena captures the heart and soul of fútbol on a global stage.
+              </p>
+    </section>
+
+    <section id="how">
+      <h2>How</h2>
+      <figure>
+        <img src="images/howimg1.jpeg" alt="Two players practicing soccer drills on a field" style="width: 300px; border-radius: 10px;">
+        <figcaption>Players practicing ball control and passing drills.</figcaption>
+    </figure>
+
+      
+      <p>
+        Learning how to play soccer starts with the basics — passing, dribbling, and shooting. 
+        These skills form the foundation of every player’s game, no matter their level.
+      </p>
+  
+      <p>
+        Teamwork is just as important as technique. 
+        Communication, positioning, and awareness help players work together to control the field and
+      </p>
+    </section>
+
+
+    <section id="why">
+      <h2>Why</h2>
+      <figure>
+        <img src="images/whyimg.jpeg" alt="Fans cheering during a soccer match" style="width: 300px; border-radius: 10px;">
+        <figcaption>Fans showing their passion for the game.</figcaption>
+      </figure>
+
+      <p>
+        Soccer brings people together like no other sport. It’s a shared language that connects communities, cultures, and generations across the world.
+      </p>
+    
+      <p>
+        The excitement of every goal, the tension of every match, and the loyalty of fans make fútbol more than just a game — it’s a lifestyle and tradition.
+      </p>
+    
+      <p>
+        Whether you play for fun, watch with friends, or support your favorite club, soccer inspires teamwork, passion, and pride everywhere it’s played.
+      </p>
+    
+    
+    </section>
+
+    <section id="ai" style="padding: 3rem; text-align: center;">
+        <h2>AI Prompts</h2>
+      
+        <figure>
+          <figcaption>AI-generated image symbolizing creativity and fútbol.</figcaption>
+        </figure>
+      
+        <p>
+          Throughout this project, I used ChatGPT to help with writing, organization, and structure. 
+          Below is a simple list of the prompts I used and the AI-generated responses.
+        </p>
+      
+        <table>
+          <tr>
+            <th>Prompts</th>
+            <th>AI Response</th>
+          </tr>
+          <tr>
+            <td>Create me a CSS that has all the default styles and include section styles for sections called who, what, when, where, how, why.</td>
+            <td> Lines 9-196, lines of code where modified and added.
+          </tr>
+          <tr>
+            <td>Give a general description of soccer/futbol, make it 3 paragraphs long.</td>
+            <td>
+              Soccer, known as fútbol in most parts of the world, is the most popular sport on the planet...  
+              Beyond its rules, soccer is about rhythm and creativity...  
+              For many, soccer is more than just a sport — it’s a lifestyle and a source of community...
+            </td>
+          </tr>
+          <tr>
+            <td>Give a general description of the Premier League. Keep it short.</td>
+            <td>
+              The Premier League is England’s top professional soccer league and one of the most popular sports competitions in the world...
+            </td>
+          </tr>
+          <tr>
+            <td>Check my grammar and see if everything makes sense.</td>
+            <td>
+              I've grown up playing a lot of sports — basketball, taekwondo, and track & field being the main ones...  
+              My friend Keith, shown in the caption, is my roommate and has been my friend since high school...  
+              I started by playing FIFA 25 on the PS5...
+            </td>
+          </tr>
+          <tr>
+            <td>Give me three paragraphs of when the best times to be a fan are, for example include the World Cup, which comes around every 4 years.</td>
+            <td>
+              The best times to be a soccer fan are during major tournaments and high-stakes matches...  
+              Another great time for fans is during the European club season...  
+              Even local leagues and rivalry matches bring their own excitement...
+            </td>
+          </tr>
+          <tr>
+            <td>I am now moving on to the greatest arenas in futbol history.</td>
+            <td>
+              Some soccer stadiums aren’t just venues — they’re symbols of history, pride, and passion...  
+              Camp Nou in Barcelona, Spain, is one of the most famous...  
+              Other icons include Maracanã in Brazil and Santiago Bernabéu in Madrid...
+            </td>
+          </tr>
+          <tr>
+            <td>I am now at the AI prompts part, let’s see what you have gathered.</td>
+            <td>
+              Throughout this project, I used ChatGPT to help organize my ideas and refine my writing.  
+              I also used AI to adjust design elements and improve clarity.
+
+            </td>
+          </tr>
+        </table>
+      </section>
+  </main>
+
+  <footer>
+    <div data-include="../components/footer.html"></div>
+    <p>&copy; <a href="https://webpages.charlotte.edu/fpintal/itis3135/fproductionz.com/">2025 Franze Pintal Productionz</a> - We Produce For Your Use!</p>
+  </footer>
+
+  <script>
+    // Function to show one section at a time
+    function display() {
+      const active = document.querySelector(".active");
+      const path = window.location.hash || "#what"; // default to Home
+      const newActive = document.querySelector(path);
+      if (active) active.classList.remove("active");
+      if (newActive) newActive.classList.add("active");
+    }
+
+    // Load Home by default if no hash
+    document.addEventListener("DOMContentLoaded", () => {
+      if (!window.location.hash) window.location.hash = "#what";
+      display();
+    });
+
+    // Run function when hash changes
+    window.addEventListener("hashchange", display);
+  </script>
+</body>
+</html>
