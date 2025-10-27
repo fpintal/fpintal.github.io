@@ -97,4 +97,125 @@
     /* Disable scale-on-hover to avoid layout jank on touch */
     a:hover { transform: none; }
   }
+
+  #introForm {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  #introForm label {
+    display: grid;
+    gap: .4rem;
+    font-weight: 600;
+  }
+  
+  #introForm input[type="text"],
+  #introForm input[type="file"],
+  #introForm textarea {
+    /*width: 100%; */
+    padding: .65rem .75rem;
+    border: 1px solid var(--border);
+    border-radius: .5rem;
+    font: inherit;
+    box-sizing: border-box;
+  }
+
+  #introForm input:focus,
+  #introForm textarea:focus {
+    outline: none;
+    outline-offset: 2px;
+  }
+
+  
+  #introForm textarea {
+    min-height: 88px;
+    resize: vertical;
+  }
+  
+  /* File input spacing */
+  #introForm input[type="file"] {
+    padding: .45rem .5rem;
+  }
+  
+  /* Buttons row */
+  #introForm > div {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    margin-top: .25rem;
+  }
+  
+  button {
+    appearance: none;
+    border: 1px solid var(--border);
+    background: #f7f7f7;
+    padding: .6rem .9rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    font: inherit;
+  }
+  
+  /* Error message */
+  #formErrors {
+    margin: .25rem 0 0;
+    color: var(--danger);
+    font-weight: 600;
+  }
+  
+  /* ===== Image block (if present) ===== */
+  .image-block { display: grid; gap: .6rem; }
+  .image-block .preview img {
+    max-width: 260px;
+    height: auto;
+    border-radius: .5rem;
+    border: 1px solid var(--border);
+  }
+  
+  /* ===== Result view ===== */
+  #result {
+    display: grid;
+    gap: 1rem;
+    padding-top: .5rem;
+  }
+  
+  #result article { display: grid; gap: .75rem; }
+  
+  #result figure {
+    margin: 0;
+    display: grid;
+    gap: .4rem;
+    justify-items: start;
+  }
+  #result figure img {
+    max-width: min(100%, 320px);
+    height: auto;
+    border-radius: .5rem;
+    border: 1px solid var(--border);
+  }
+  #result figure figcaption {
+    color: var(--muted);
+    font-style: italic;
+    font-size: .95rem;
+  }
+  
+  /* Lists inside result */
+  #result ul {
+    margin: .25rem 0 0;
+    padding-left: 1.25rem;
+  }
+  #result li { margin: .25rem 0; }
+  #result li span, #result li strong { font-weight: 700; }
+
+  .hidden {
+    position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  }
   

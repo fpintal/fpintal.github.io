@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Franze Pintal | ITIS 3135 | Introduction Form</title>
+  <link rel="stylesheet" href="./styles/default.css" />
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header>
+        <div data-include="./components/header.html"></div> 
+    </header>
+  <main>
+    <h2>Introduction Form</h2>
+    <h3>Please submit the form below.</h3>
+
+    <form id="introForm" novalidate>
+      <label>Full Name
+        <input name="name" type="text" required placeholder="Your full name" />
+      </label>
+
+
+      <label>Mascot
+        <input name="mascot" type="text" required placeholder="Your mascot" />
+      </label>
+
+      <label>Image URL
+        <input type="file" id="image" accept="image/png, image/jpeg, image/jpg" required>
+      </label>
+
+      <label>Image Caption
+        <input name="imageCaption" type="text" required placeholder="Caption for your image" />
+      </label>
+
+      <label>Personal Background
+        <textarea name="personalBackground" rows="2" required placeholder="Describe your personal background"></textarea>
+      </label>
+
+      <label>Professional Background
+        <textarea name="professionalBackground" rows="2" required placeholder="Describe your professional background"></textarea>
+      </label>
+
+      <label>Academic Background
+        <textarea name="academicBackground" rows="2" required placeholder="Describe your academic background"></textarea>
+      </label>
+
+      <label>Background in Web Development
+        <textarea name="webDevBackground" rows="2" required placeholder="Describe your background in web development"></textarea>
+      </label>
+
+      <label>Primary Computer Platform
+        <input name="primaryPlatform" type="text" required placeholder="Mac, Windows, Linux, etc." />
+      </label>
+
+      <label>Courses Currently Taking</label>
+      <div id="coursesRepeater">
+        <div class="course">
+            <input name="courseDept"  type="text" placeholder="Department (e.g., MATH)" required />
+            <input name="courseNumber" type="text" placeholder="Number (e.g., 2164)" required />
+            <input name="courseName" type="text" placeholder="Course name (e.g., Linear Algebra)" required />
+            <input name="courseReason" type="text" placeholder="Reason (e.g., Major requirement)" required />
+            <button type="button" class="removeCourse" aria-label="Remove course" style="display:none;">✕</button>
+        </div>
+    </div>
+    
+    
+    <button type="button" id="addCourse">Add another course</button>
+
+      <label>Quote
+        <textarea name="quote" rows="2" required placeholder="Your favorite Quote"></textarea>
+      </label>
+
+      <label>Quote Author
+        <textarea name="quoteAuthor" rows="2" required placeholder="The author of the quote"></textarea>
+      </label>
+
+      <label>Interesting Fact
+        <textarea name="interestingFact" rows="2" required placeholder="Share an interesting fact about yourself"></textarea>
+      </label>
+
+      <label>Anything Else?
+        <textarea name="anythingElse" rows="2" placeholder="Anything else you’d like to share"></textarea>
+      </label>
+
+      <div>
+        <button type="submit">Submit</button>
+        <button type="reset" id="resetBtn">Reset</button>
+        <button type="button" id="clearBtn">Clear</button>
+      </div>
+      <p id="formErrors"></p>
+    </form>
+
+    <section id="result" hidden>
+        <h2 class="hidden">Result</h2>
+    </section>
+    <p id="resultResetWrap" hidden><a href="#" id="resultResetLink">Reset and do it again</a></p>
+  </main>
+  <footer>
+    <div data-include="./components/footer.html"></div>
+  </footer>
+    <script src="./scripts/HTMLInclude.min.js"></script>
+    <script src="./scripts/introduction.js" defer></script>
+</body>
+</html>
+
+
