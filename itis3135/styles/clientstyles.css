@@ -1,0 +1,175 @@
+/* ========== Base ========== */
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fffafc;
+  background-image: url('assets/background.png');
+  background-repeat: repeat;
+  background-size: 150px;
+  animation: scroll-bg 30s linear infinite;
+}
+@keyframes scroll-bg {
+  from { background-position: 0 0; }
+  to   { background-position: 1000px 1000px; }
+}
+
+h1, h2 {
+  margin: 0 0 15px;
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #e91e63;
+}
+
+/* ========== Header & Nav ========== */
+header {
+  background-color: #fed8e8;
+  padding: 32px 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(232, 30, 83, 0.3);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin-bottom: 48px;
+}
+header nav a {
+  display: inline-block;
+  margin: 8px 10px;
+  text-decoration: none;
+  color: #6b0f35;
+  font-weight: 700;
+}
+header nav a[aria-current="page"] { text-decoration: underline; }
+
+/* Button helper used by links & submit */
+.btn,
+button {
+  background-color: #e91e63;
+  color: #fff;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color .3s ease;
+}
+.btn:hover, button:hover { background-color: #c2185b; }
+
+
+/* ========== Page Sections / Cards ========== */
+.content-box {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,.05);
+  padding: 32px 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ========== Lists (Services, Add-ons, Tiers) ========== */
+#services ul, #addon ul, #tiers ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 16px;
+}
+#services li, #addon li, #tiers li {
+  background-color: #fde4ed;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #9c184f;
+}
+/* when add-ons are simple bullet list on services page */
+#addon ul { list-style-type: disc; padding-left: 1.2em; }
+#addon li { background: none; padding: 0; margin-bottom: 8px; font-weight: 500; }
+
+/* ========== Forms (Booking) ========== */
+form input,
+form select,
+textarea,
+input[type="file"] {
+  display: block;
+  padding: 12px 16px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  border: 2px solid #f8c8dc;
+  border-radius: 12px;
+  transition: border-color .3s ease;
+}
+form input:focus,
+form select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #e91e63;
+  box-shadow: 0 0 8px #f8c8dc;
+}
+form button[type="submit"] {
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+/* two-column email/phone on wide screens */
+#form input[type="email"],
+#form input[type="tel"] {
+  width: 48%;
+  display: inline-block;
+  margin-right: 2%;
+}
+#form input[type="tel"] { margin-right: 0; }
+
+/* ========== Confirmation message box (confirmation page) ========== */
+#confirmation,
+.summary {
+  margin-top: 20px;
+  padding: 18px 16px;
+  background-color: #e1f7e7;
+  color: #2e7d32;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+/* ========== Footer ========== */
+footer {
+  background-color: #fed8e8;
+  padding: 32px 20px;
+  text-align: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: 0 -2px 6px rgba(232, 30, 83, 0.2);
+  margin-top: 60px;
+}
+.footer-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.footer-gallery img {
+  width: 100%;
+  max-width: 140px;
+  border-radius: 12px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  box-shadow: 0 4px 10px rgba(0,0,0,.1);
+  transition: transform .3s ease;
+}
+.footer-gallery img:hover { transform: scale(1.05); }
+.footer-contact { margin-top: 18px; font-size: .95rem; color: #6b0f35; }
+
+/* ========== Responsive tweaks ========== */
+@media (max-width: 600px) {
+  #form input[type="email"],
+  #form input[type="tel"] {
+    width: 100%;
+    display: block;
+    margin-right: 0;
+  }
+}

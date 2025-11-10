@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book an Appointment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="../styles/clientstyles.css" />
+</head>
+<body>
+  <div data-include="../components/clientheader.html"></div>
+
+  <main>
+    <div class="content-box">
+      <h2>Book Now</h2>
+
+      <form id="form" action="https://formspree.io/f/xblqrbgj" method="POST">
+        <input type="hidden" name="_subject" value="New Booking Request – YtheTech @ YANNA">
+        <!-- CONTACT INFO -->
+        <input type="text" id="name" name="name" placeholder="Your Name" required />
+        <input type="email" id="email" name="email" placeholder="Email (optional)" />
+        <input type="tel" id="phone" name="phone" placeholder="Phone (optional)" />
+
+        <!-- SERVICES -->
+        <label for="service" class="sr-only">Select a Service</label>
+        <select id="service" name="service" required>
+          <option value="">Select a Service</option>
+          <option value="Acrylics Full Set">Acrylics Full Set</option>
+          <option value="Acrylics Fill in">Acrylics Fill in</option>
+          <option value="Acrylic Toe Full Set">Acrylic Toe Full Set</option>
+          <option value="Manicure/Overlay">Manicure/Overlay</option>
+          <option value="Builder Gel">Builder Gel</option>
+          <option value="Gel-X">Gel-X</option>
+        </select>
+
+        <!-- ADD ONS -->
+        <fieldset id="addon-buttons">
+          <legend>Select Add-Ons (optional)</legend>
+          <label><input type="checkbox" name="addons" value="Special Shapes"> Special Shapes — $5</label>
+          <label><input type="checkbox" name="addons" value="Cut Down"> Cut Down — $5</label>
+          <label><input type="checkbox" name="addons" value="Medium Length"> Medium Length — $5</label>
+          <label><input type="checkbox" name="addons" value="Long Length"> Long Length — $10</label>
+          <label><input type="checkbox" name="addons" value="XL Length"> XL Length — $15</label>
+          <label><input type="checkbox" name="addons" value="Gel-X Long/XL"> Gel-X Long/XL — $5</label>
+        </fieldset>
+
+        <!-- TIERS -->
+        <label for="artTier">Select Art Tier (optional)</label>
+        <select id="artTier" name="tier">
+          <option value="">Select a Tier</option>
+          <option value="Tier 1 — $15">Tier 1 — $15</option>
+          <option value="Tier 2 — $25">Tier 2 — $25</option>
+          <option value="Tier 3 — $30">Tier 3 — $30</option>
+          <option value="Tier 4 — $40">Tier 4 — $40</option>
+        </select>
+
+        <!-- DATE AND TIME SELECTION -->
+        <input type="text" id="date" name="date" placeholder="Select a Date" required />
+        <select id="time" name="time" required>
+          <option value="">Select a Time</option>
+          <option value="09:30 AM">9:30 AM</option>
+          <option value="10:00 AM">10:00 AM</option>
+          <option value="10:30 AM">10:30 AM</option>
+          <option value="11:00 AM">11:00 AM</option>
+          <option value="11:30 AM">11:30 AM</option>
+          <option value="12:00 PM">12:00 PM</option>
+          <option value="12:30 PM">12:30 PM</option>
+          <option value="1:00 PM">1:00 PM</option>
+          <option value="1:30 PM">1:30 PM</option>
+          <option value="2:00 PM">2:00 PM</option>
+          <option value="2:30 PM">2:30 PM</option>
+          <option value="3:00 PM">3:00 PM</option>
+          <option value="3:30 PM">3:30 PM</option>
+          <option value="4:00 PM">4:00 PM</option>
+          <option value="4:30 PM">4:30 PM</option>
+          <option value="5:00 PM">5:00 PM</option>
+          <option value="5:30 PM">5:30 PM</option>
+          <option value="6:00 PM">6:00 PM</option>
+          <option value="6:30 PM">6:30 PM</option>
+        </select>
+
+        <!-- ADDITIONAL NOTE -->
+        <textarea id="styleNotes" name="notes" rows="4" placeholder="Describe the style or design you want (inspo, colors, shape, length)…"></textarea>
+
+        <button type="submit" class="btn">Confirm Booking</button>
+      </form>
+    </div>
+  </main>
+
+
+  <div data-include="../components/clientfooter.html"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+    flatpickr("#date", {
+      minDate: "today",
+      dateFormat: "Y-m-d",
+      disableMobile: true
+    });
+  </script>
+  <script src="../scripts/HTMLInclude.min.js"></script>
+  <script src="../scripts/booking.js"></script>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
