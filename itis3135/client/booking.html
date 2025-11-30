@@ -84,6 +84,11 @@
         <!-- ADDITIONAL NOTE -->
         <textarea id="styleNotes" name="notes" rows="4" placeholder="Describe the style or design you want (inspo, colors, shape, length)…"></textarea>
 
+        <!-- ESTIMATED PRICE -->
+        <div id="booking-price-estimate" style="background: #fed8e8; padding: 0.8rem; border-radius: 6px; margin: 1rem 0; border: 2px solid #e91e63;">
+          <p style="margin: 0; font-size: 1.2em; font-weight: bold; color: #e91e63;">💵 Estimated Price: <span id="booking-price-value">$0</span></p>
+        </div>
+
         <button type="submit" class="btn">Confirm Booking</button>
       </form>
     </div>
@@ -93,15 +98,9 @@
   <div data-include="../components/clientfooter.html"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script>
-    flatpickr("#date", {
-      minDate: "today",
-      dateFormat: "Y-m-d",
-      disableMobile: true
-    });
-  </script>
   <script src="../scripts/HTMLInclude.min.js"></script>
   <script src="../scripts/booking.js"></script>
+  <script src="../scripts/booking-price.js"></script>
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 
 </body>

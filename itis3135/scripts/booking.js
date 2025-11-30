@@ -1,5 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
     
+    // Initialize flatpickr for date selection
+    const dateInput = document.getElementById("date");
+    if (dateInput && typeof flatpickr !== 'undefined') {
+      flatpickr(dateInput, {
+        minDate: "today",
+        dateFormat: "Y-m-d",
+        disableMobile: true
+      });
+    }
+
     const form = document.getElementById("form");
     if (!form) return;
   
