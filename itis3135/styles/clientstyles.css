@@ -82,7 +82,7 @@ button {
 .confirm-details dt { font-weight:700; color:#6b0f35 }
 .confirm-details dd { margin:0 }
 .confirm-actions { display:flex; gap:.5rem; justify-content:flex-end; margin-top: .8rem }
-.btn.secondary { background: #fff; color: #6b0f35; border: 1px solid #6b0f35 }
+.secondary { background: #fff; color: #6b0f35; border: 1px solid #6b0f35 }
 .btn:hover, button:hover { background-color: #c2185b; }
 
 

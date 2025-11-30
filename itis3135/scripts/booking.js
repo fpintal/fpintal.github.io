@@ -13,12 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("form");
     if (!form) return;
   
-    // New behaviour: show confirmation overview when user clicks submit,
-    // then send only if user confirms in the modal.
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      showConfirmationOverview();
-    });
+    // Submit handler will be registered after helper functions are defined
 
     // Confirmation modal controls
     var confirmOverlay = document.getElementById('confirm-overlay');
@@ -70,6 +65,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if (confirmSendBtn) confirmSendBtn.focus();
       }
     }
+
+    // Register submit handler after functions are declared to avoid lint/use-before-define
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      showConfirmationOverview();
+    });
 
     function hideConfirmationOverview(){
       if (confirmOverlay) {
