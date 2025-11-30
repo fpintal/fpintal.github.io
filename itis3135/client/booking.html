@@ -91,6 +91,21 @@
 
         <button type="submit" class="btn">Confirm Booking</button>
       </form>
+      
+      <!-- JS 2 -->
+      <!-- Confirmation overlay (hidden by default) -->
+      <div id="confirm-overlay" class="confirm-overlay" aria-hidden="true">
+        <div class="confirm-dialog" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+          <h3 id="confirm-title">Confirm your booking</h3>
+          <div id="confirm-details" class="confirm-details">
+            <!-- populated by JS -->
+          </div>
+          <div class="confirm-actions">
+            <button id="confirm-send" class="btn">Confirm & Send</button>
+            <button id="confirm-cancel" class="btn secondary">Cancel</button>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
